@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get 'books/new'
-  get 'books/index'
-  get 'books/show'
-  get 'books/edit'
+  get 'new' => 'books#new'
+  get 'index' => 'books#index'
+  get 'show' => 'books#show'
+  get 'edit' => 'books#edit'
+  
   get 'lists/new'
   get 'lists/index'
   get 'lists/show'
