@@ -1,11 +1,22 @@
-<h1>投稿一覧</h1>
+<div class="book-wrap">
+<% @books.each do |book| %>
+  <div class="book-box">
+    <span class="book-body"><%= book.body %></span>
+    <span class="book-title"><%=link_to book.title, book_path(book.id) %></span>
+  </div>
+<% end %>
+</div>
 
-<% @book.each do |book| %>
+<h2>New book</h2>
 
-  <p>タイトル</p>
-  
-  <span>
-    <%= link_to book.title, "/books/#{book.id}" %>
-  </span>
-  
+<%= form_with model: @book, url: '/book', method: :post do |f| %>
+
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+	
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+	
+	<h4></h4>
+  <%= f.submit 'Create Book' %>
 <% end %>
