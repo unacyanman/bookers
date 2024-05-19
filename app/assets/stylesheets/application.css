@@ -13,27 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-h1 {
-  font-size: 26px;
-}
-
-header {
-  font-size: 26px;
-}
-
-table th {/*table内のthに対して*/
-  padding: 1px 1px 5px;
-  margin: 33px;
-}
-
-table td {/*table内のtdに対して*/
-  padding: 1px 5px 7px;
-  margin: 33px;
-}
-
-main {
-}
-
-.list-box {
-}
